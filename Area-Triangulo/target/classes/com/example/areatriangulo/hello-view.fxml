@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="693.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.areatriangulo.HelloController">
+   <children>
+      <Label layoutX="416.0" layoutY="78.0" text="a = ?" textFill="#e2ff0a">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="416.0" layoutY="152.0" text="b = ?" textFill="#e2ff0a">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="416.0" layoutY="224.0" text="c = ?" textFill="#e2ff0a">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="b" layoutX="481.0" layoutY="145.0" prefHeight="44.0" prefWidth="208.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="a" layoutX="481.0" layoutY="81.0" prefHeight="44.0" prefWidth="208.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="c" layoutX="481.0" layoutY="217.0" prefHeight="44.0" prefWidth="208.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Button fx:id="calcular" layoutX="500.0" layoutY="272.0" mnemonicParsing="false" onAction="#formula" text="Calcular">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="total" layoutX="472.0" layoutY="333.0" text="-----------------" textFill="#e2ff0a">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="249.0" fitWidth="329.0" layoutX="41.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@triangle.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
