@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.texto.HelloController">
+   <bottom>
+      <FlowPane prefHeight="94.0" prefWidth="645.0" BorderPane.alignment="CENTER">
+         <children>
+            <FlowPane alignment="CENTER" hgap="50.0" prefHeight="95.0" prefWidth="645.0" styleClass="rodape" stylesheets="@style.css">
+               <children>
+                  <CheckBox fx:id="check" mnemonicParsing="false" text="Procura profunda">
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                  </CheckBox>
+                  <Button mnemonicParsing="false" onAction="#CountWords" stylesheets="@style.css" text="Contar">
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                  </Button>
+                  <Label text="Palavra" />
+                  <TextField fx:id="word" styleClass="texbox" stylesheets="@style.css">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <FlowPane.margin>
+                        <Insets left="-40.0" />
+                     </FlowPane.margin>
+                  </TextField>
+                  <Label fx:id="count" text="---------------">
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                  </Label>
+               </children>
+               <FlowPane.margin>
+                  <Insets />
+               </FlowPane.margin>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </FlowPane>
+         </children>
+      </FlowPane>
+   </bottom>
+   <center>
+      <TextArea fx:id="area_texto" prefHeight="610.0" prefWidth="77.0" styleClass="area-text" stylesheets="@style.css" wrapText="true" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <MenuBar styleClass="select" stylesheets="@style.css" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Letra">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ChangeColorRed" text="Vermelho" />
+              <MenuItem mnemonicParsing="false" onAction="#ChangeColorGray" text="Cinzento" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Tamanho de Letra">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ChangeColorGray">
+                     <graphic>
+                        <Spinner fx:id="FontSize" onMouseClicked="#ChangeFontSize" onSwipeDown="#ChangeFontSize" onSwipeUp="#ChangeFontSize" />
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

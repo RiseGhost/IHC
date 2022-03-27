@@ -1,0 +1,27 @@
+.area-text{
+    -fx-text-inner-color: grey;
+
+}
+
+.area-text .content{
+    -fx-background-color: #ADE0DB;
+    -fx-color:grey;
+}
+
+.button {
+    -fx-border-radius: 20px;
+    -fx-background-color: #ADE0DB;
+    /*-fx-background-color: dodgerblue;*/
+}
+
+.select{
+    -fx-background-color: #D0F2E7;
+}
+
+.texbox {
+    -fx-background-color: #ADE0DB;
+}
+
+.rodape{
+    -fx-background-color: #D0F2E7;
+}
