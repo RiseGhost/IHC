@@ -1,0 +1,22 @@
+.label{
+    -fx-background-color: #545353;
+}
+
+.label-subtotal{
+    -fx-background-color: #5d5c5c;
+}
+
+.grid-cell{
+    -fx-background-color: #545353;
+}
+
+.button-number{
+    -fx-background-color: #817c7c;
+    -fx-border-radius: 50px;
+}
+
+.button-simblo{
+    -fx-background-color: #817c7c;
+    -fx-border-radius: 50px;
+    -fx-color: #45d312;
+}
