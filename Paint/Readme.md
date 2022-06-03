@@ -15,13 +15,13 @@
     </div>
     <h3>  Project Layout: </h3>
     <div class="image">
-        <img src="https://user-images.githubusercontent.com/91985039/171900686-79dcf948-2f76-47de-9957-8ec8bba49fe7.jpg">
+        <img src="https://user-images.githubusercontent.com/91985039/171900686-79dcf948-2f76-47de-9957-8ec8bba49fe7.jpg"> <p>
         O software tem uma aparência de hamburguer 🍔, com menus em cima e em baixo da área de desanho. Na área de desanho foi colocado um canvas. Na parte superior e inferior foi utilizado dois GridPane. Para criar os menus utilizei MenuBars. Isto todo está coloca por cima de um AnchorPane.
     </div>
     <h3> Functionality: </h3>
     <h4> Draw Geometric Figure:</h4>
     <div class="image">
-        <img src="https://user-images.githubusercontent.com/91985039/171907007-3a3abcb3-8f54-4470-8428-bd3127e4b4a7.jpg">
+        <img src="https://user-images.githubusercontent.com/91985039/171907007-3a3abcb3-8f54-4470-8428-bd3127e4b4a7.jpg"> <p>
         O utilizador consegue desenhar 3 figuras geometricas. Em qualquer umas das figuras geometricas ele pode escolher a cor que deseja e a espesura da borda. No circulo e no quardrado o utilizador clica num ponto e depois o programa mostra um real time o tamanho da figura quando o utilizador volta a clicar a figura é desenhar naquela posição. No triângulo o utilizador apenas clica em 3 pontos na tela e ele desenhar um triângulo unindo os 3 pontos.
     </div>
 </div>
@@ -113,17 +113,17 @@ Utilizo um ArrayList de Coordenadas para guardar as coordenasdas dos 3 pontos do
 <div class="container">
     <h4> Tools: </h4>
     <div class="image">
-        <img src="https://user-images.githubusercontent.com/91985039/171916807-1d65f811-701b-468f-9dcd-6aa5bd081657.jpg">
+        <img src="https://user-images.githubusercontent.com/91985039/171916807-1d65f811-701b-468f-9dcd-6aa5bd081657.jpg"> <p>
         O utlizador tem várias ferramentas ao seu dispor. O conta gotas premite ao utlizador que quando clique em cima de pixel da image a cor desse pixel fica defenida no pincel. O mover premeti ao utilizador mover o canvas inteiro. A linha premite ao utilizador desenhar um linha mostrado feedback em real time. O texto premite adicionar texto escrito a image. O balde de tinta pitar um área o o fractal desenhar o fractal de mandelbrot.
     </div>
     <h4> File: </h4>
     <div class="image">
-        <img src="https://user-images.githubusercontent.com/91985039/171918703-e53292ab-4722-4ff0-bdda-68a17f653cf7.jpg">
+        <img src="https://user-images.githubusercontent.com/91985039/171918703-e53292ab-4722-4ff0-bdda-68a17f653cf7.jpg"> <p>
         O utilizador pode guardar o desanho que fez em PGN, assim como importar imagem e alterar o fundo do canvas para uma imagem. Se o utilizador importar uma imagem ele pode alterar o tamnaho dela a posição dela mas não pode desenhar por cima. Se alterar o fundo do canvas para uma imagem o utilizar poderar desenhar por cima mas também poderar apagar a imagem com a borracha.
     </div>
     <h4> Mandelbrot: </h4>
     <div class="image">
-        <img src="https://user-images.githubusercontent.com/91985039/171925822-ad1d011a-9f34-4657-9287-9a1417906700.jpg">
+        <img src="https://user-images.githubusercontent.com/91985039/171925822-ad1d011a-9f34-4657-9287-9a1417906700.jpg"> <p>
         O utilizador quando desejar desenhar um fractal ele poderar escolher algumas coisas, como por exemplo a cor do fractal. Usando os dedos num touchpad poderar alterar a posição do fractal e através dos botões: <br>
         Fractal Zoom Out; <br>
         Fractal Zoom in; <br>
@@ -145,36 +145,3 @@ Utilizo um ArrayList de Coordenadas para guardar as coordenasdas dos 3 pontos do
     <img src="https://user-images.githubusercontent.com/91985039/171929745-5ed7ff3a-8dec-411e-aa8c-0d623b5e32af.jpg">
     <img src="https://user-images.githubusercontent.com/91985039/171929761-2344e9cf-a13d-41d7-9738-5bdde2dd8362.jpg">
 </div>
-
-<style>
-    .container h3{
-        color: rgb(0,230,0);
-        padding-bottom: 5px;
-    }
-
-    .container h4{
-        color: rgb(0,230,0);
-        padding-bottom: 5px;
-    }
-
-    .container .texto{
-        text-align:justify;
-        text-justify: auto;
-    }
-
-    .container .image{
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        text-align:justify;
-        text-justify: auto;
-    }
-
-    .container .image img{
-        width: 415px;
-        padding-right: 25px;
-        border-right: 1px solid rgb(0,230,0);
-    }
-
-</style>
-
