@@ -1,0 +1,68 @@
+.toggle-button {
+    -fx-text-fill: black;
+    -fx-base: transparent;
+    -fx-background: transparent;
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+    -fx-effect: null;
+    -fx-min-width: 100px;
+}
+
+
+.toggle-button:selected{
+    -fx-text-fill: black;
+    -fx-base: #a8ef94;
+    -fx-background: #a8ef94;
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+    -fx-effect: null;
+}
+
+.toggle-button:hover{
+    -fx-base: #dcd520;
+    -fx-background: #dcd520;
+}
+
+
+
+
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #686972;
+    -fx-background-color: #686972;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+    -fx-padding: 0px;
+}
+.radio-button:selected .radio .dot {
+    -fx-background-color: #00ff00;
+}
+
+.menu {
+    -fx-background-color: #000000;
+}
+.menu-item {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: verdana;
+    -fx-font-size: 11.4px;
+}
+.menu-item:focused {
+    -fx-background: -fx-accent;
+    -fx-background-color: #686972;
+    -fx-text-fill: #686972;
+    -fx-font-family: verdana;
+}
+
+.slider .track {
+    -fx-background-color: #686972;
+}
+
+.button:hover {
+    -fx-background-color: #f10000;
+    -fx-scale-y: 1.1;
+}
+
+.button{
+    -fx-background-color: black;
+}

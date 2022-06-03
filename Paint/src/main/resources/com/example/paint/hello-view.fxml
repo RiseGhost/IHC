@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.paint.HelloController">
+   <children>
+      <GridPane prefHeight="62.0" prefWidth="600.0" style="-fx-background-color: black; -fx-view-order: 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="127.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="73.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="36.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ColorPicker fx:id="colorPicker" style="-fx-background-color: grey;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <MenuBar prefHeight="23.0" prefWidth="100.0" style="-fx-background-color: black;" stylesheets="@style.css" GridPane.columnIndex="4" GridPane.rowIndex="1">
+              <menus>
+                <Menu mnemonicParsing="false" style="-fx-color: black;" text="   ⬇">
+                  <items>
+                    <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <RadioButton fx:id="circle" mnemonicParsing="false" stylesheets="@style.css" text="Circulo" textFill="WHITE" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <RadioButton fx:id="quadrangle" mnemonicParsing="false" stylesheets="@style.css" text="Quardrado" textFill="WHITE" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <RadioButton fx:id="triangle" mnemonicParsing="false" stylesheets="@style.css" text="Triângulo" textFill="WHITE" />
+                           </graphic>
+                        </MenuItem>
+                  </items>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@geometrico.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <MenuBar prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: black;" stylesheets="@style.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <menus>
+                  <Menu mnemonicParsing="false" style="-fx-color: black;" text="Tools  ⬇">
+                     <items>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <RadioButton fx:id="rubber" mnemonicParsing="false" stylesheets="@style.css" text="Borracha" textFill="WHITE" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <RadioButton fx:id="ampulheta" mnemonicParsing="false" stylesheets="@style.css" text="Conta gostas" textFill="WHITE" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <RadioButton fx:id="move" mnemonicParsing="false" stylesheets="@style.css" text="Mover" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <RadioButton fx:id="line" mnemonicParsing="false" stylesheets="@style.css" text="linha" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <RadioButton fx:id="Text" mnemonicParsing="false" onAction="#WriteText" stylesheets="@style.css" text="Texto" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <RadioButton fx:id="Balde" mnemonicParsing="false" stylesheets="@style.css" text="Balde de Tinta" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <RadioButton fx:id="Fractal" mnemonicParsing="false" stylesheets="@style.css" text="Fractal" />
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@martelo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <MenuBar prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: black;" stylesheets="@style.css">
+               <menus>
+                  <Menu mnemonicParsing="false" style="-fx-color: black;" text="Ficheiro ⬇">
+                     <items>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <Button mnemonicParsing="false" onAction="#SaveIamge" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: black; -fx-border-width: 100px;" text="Guardar" textFill="WHITE" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <Button mnemonicParsing="false" onAction="#ImportImage" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: black; -fx-border-width: 500px;" text="Importar Imagem" textFill="WHITE" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <Button mnemonicParsing="false" onAction="#BackgroundImage" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: black; -fx-border-width: 500px;" text="Imagem de Funfo" textFill="WHITE" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <Button mnemonicParsing="false" onAction="#ResetAll" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: black; -fx-border-width: 500px;" text="Repor Original" textFill="WHITE" />
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <MenuBar prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: black;" stylesheets="@style.css" GridPane.columnIndex="1">
+               <menus>
+                  <Menu mnemonicParsing="false" style="-fx-color: black;" text=" ⬇">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Saturação">
+                           <graphic>
+                              <Slider fx:id="SaturationSlider" onMouseDragged="#GrayScale" />
+                           </graphic></MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Brilho">
+                           <graphic>
+                              <Slider fx:id="BrightnessSlider" onMouseDragged="#GrayScale" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Crontraste">
+                           <graphic>
+                              <Slider fx:id="ContrastSlider" onMouseDragged="#GrayScale" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <Button mnemonicParsing="false" onAction="#ResetColor" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: black; -fx-border-width: 500px;" text="Repor" textFill="WHITE" />
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ao-controle.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <MenuBar prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: black;" stylesheets="@style.css" GridPane.columnIndex="2">
+               <menus>
+                  <Menu mnemonicParsing="false" style="-fx-color: black;" text=" ⬇">
+                     <items>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <Slider fx:id="RotateSlider" onMouseDragged="#RotateCanvas" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <Button mnemonicParsing="false" onAction="#ResetRotate" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: black; -fx-border-width: 500px;" text="Repor" textFill="WHITE" />
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@girar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <MenuBar prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: black;" stylesheets="@style.css" GridPane.rowIndex="1">
+               <menus>
+                  <Menu mnemonicParsing="false" style="-fx-color: black;" text=" ⬇">
+                     <items>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <Slider fx:id="sizeBar" onMouseDragged="#BrushNumberTextBox" stylesheets="@style.css" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <TextField fx:id="sizeBarText" alignment="CENTER" onKeyTyped="#BrushNumberSet" prefHeight="30.0" prefWidth="146.0" style="-fx-background-color: black; -fx-text-fill: white;" text="4">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@largura.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <MenuBar prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: black;" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <menus>
+                  <Menu mnemonicParsing="false" style="-fx-color: black;" text=" ⬇">
+                     <items>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <RadioButton fx:id="SquareBrush" mnemonicParsing="false" onAction="#DeselectCircleBrush" stylesheets="@style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@pare.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </RadioButton>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <RadioButton fx:id="CircleBrush" mnemonicParsing="false" onAction="#DeselectSquareBrush" stylesheets="@style.css" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@lua-cheia.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </RadioButton>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@pincel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <MenuBar prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: black;" stylesheets="@style.css" GridPane.columnIndex="3">
+               <menus>
+                  <Menu mnemonicParsing="false" style="-fx-color: black;" text="Fractal ⬇">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="RED">
+                           <graphic>
+                              <Slider fx:id="FractalRed" onMouseClicked="#ChangeFractalColor" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="GREEN">
+                           <graphic>
+                              <Slider fx:id="FractalGreen" onMouseClicked="#ChangeFractalColor" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="BLUE">
+                           <graphic>
+                              <Slider fx:id="FractalBlue" onMouseClicked="#ChangeFractalColor" />
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </children>
+      </GridPane>
+      <GridPane prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: black; -fx-view-order: 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="150.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="403.0" minWidth="10.0" prefWidth="231.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="112.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="108.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Slider fx:id="border" stylesheets="@style.css" GridPane.columnIndex="1">
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding></Slider>
+            <Label prefHeight="72.0" prefWidth="166.0" style="-fx-background-color: black;" text="Espesura da borda" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#ChangeIntrevaloIn" style="-fx-background-color: black;" stylesheets="@style.css" text="Fractal Zoom in" textFill="WHITE" GridPane.columnIndex="3" />
+            <Button mnemonicParsing="false" onAction="#ChangeIntrevaloOut" style="-fx-background-color: black;" stylesheets="@style.css" text="Fractal Zoom Out" textFill="WHITE" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <AnchorPane fx:id="CanvasPane" layoutX="190.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0" style="-fx-view-order: 1; -fx-background-color: white;" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
+         <children>
+            <Canvas fx:id="canvas" height="307.0" width="600.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
